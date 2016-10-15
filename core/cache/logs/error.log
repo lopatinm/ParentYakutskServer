@@ -1,0 +1,87 @@
+[2016-10-13 17:34:51] (ERROR @ C:\wamp\www\ParentYakutskServer\core\model\modx\rest\modrestclient.class.php : 241) Could not connect to provider at: http://rest.modx.com/extras/
+[2016-10-13 17:34:51] (ERROR in modTransportProvider::find @ C:\wamp\www\ParentYakutskServer\core\model\modx\transport\modtransportprovider.class.php : 271) MODX получил пустой ответ от поставщика. Пожалуйста, проверьте URL-адрес поставщика и убедитесь, что поставщик является корректным поставщиком.
+[2016-10-13 17:34:51] (ERROR @ C:\wamp\www\ParentYakutskServer\core\model\modx\rest\modrestclient.class.php : 241) Could not connect to provider at: http://rest.modx.com/extras/
+[2016-10-13 17:34:51] (ERROR in modTransportProvider::find @ C:\wamp\www\ParentYakutskServer\core\model\modx\transport\modtransportprovider.class.php : 271) MODX получил пустой ответ от поставщика. Пожалуйста, проверьте URL-адрес поставщика и убедитесь, что поставщик является корректным поставщиком.
+[2016-10-13 18:32:45] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 811) modUser: Attempt to set NOT NULL field username to NULL
+[2016-10-13 18:32:45] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 811) modUserProfile: Attempt to set NOT NULL field fullname to NULL
+[2016-10-13 18:32:45] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 811) modUserProfile: Attempt to set NOT NULL field email to NULL
+[2016-10-13 18:33:36] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1318) Could not get table class for class: modAccess
+[2016-10-13 18:33:36] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1287) Could not get table name for class: modAccess
+[2016-10-13 18:33:36] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS `modAccess` WHERE `modAccess`.`principal` = 3' at line 1
+)
+
+[2016-10-13 23:37:45] (ERROR @ C:\wamp\www\ParentYakutskServer\core\model\modx\modx.class.php : 1611) [OnWebPageInit]------WebKitFormBoundaryuCWLQXA39FPCyguC
+Content-Disposition: form-data; name="id"
+
+2
+------WebKitFormBoundaryuCWLQXA39FPCyguC--
+
+[2016-10-13 23:38:14] (ERROR @ C:\wamp\www\ParentYakutskServer\core\model\modx\modx.class.php : 1611) [OnWebPageInit]------WebKitFormBoundary06NekmaBS2rwl8Pr
+Content-Disposition: form-data; name="id"
+
+2
+------WebKitFormBoundary06NekmaBS2rwl8Pr--
+
+[2016-10-14 01:30:04] (ERROR @ C:\wamp\www\ParentYakutskServer\core\cache\includes\elements\modplugin\2.include.cache.php : 13) PHP warning: Creating default object from empty value
+[2016-10-14 01:52:09] (ERROR @ C:\wamp\www\ParentYakutskServer\core\cache\includes\elements\modplugin\2.include.cache.php : 13) PHP warning: Creating default object from empty value
+[2016-10-14 02:44:07] (ERROR @ C:\wamp\www\ParentYakutskServer\core\cache\includes\elements\modplugin\2.include.cache.php : 13) PHP warning: Creating default object from empty value
+[2016-10-14 02:45:14] (ERROR @ C:\wamp\www\ParentYakutskServer\core\cache\includes\elements\modplugin\2.include.cache.php : 13) PHP warning: Creating default object from empty value
+[2016-10-14 02:45:18] (ERROR @ C:\wamp\www\ParentYakutskServer\core\cache\includes\elements\modplugin\2.include.cache.php : 13) PHP warning: Creating default object from empty value
+[2016-10-15 07:40:20] (ERROR @ C:\wamp\www\ParentYakutskServer\core\model\modx\modx.class.php : 1613) [OnWebPageInit] Plugin setParams failed!
+[2016-10-15 07:40:34] (ERROR @ C:\wamp\www\ParentYakutskServer\core\model\modx\modx.class.php : 1613) [OnWebPageInit] Plugin setParams failed!
+[2016-10-15 07:42:26] (ERROR @ C:\wamp\www\ParentYakutskServer\core\model\modx\modx.class.php : 1611) [OnPageNotFound][[!addUser]][[!deleteUser]]
+[2016-10-15 08:23:20] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1318) Could not get table class for class: modAccess
+[2016-10-15 08:23:20] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1287) Could not get table name for class: modAccess
+[2016-10-15 08:23:20] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS `modAccess` WHERE `modAccess`.`principal` = 2' at line 1
+)
+
+[2016-10-15 08:23:39] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1318) Could not get table class for class: modAccess
+[2016-10-15 08:23:39] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1287) Could not get table name for class: modAccess
+[2016-10-15 08:23:39] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS `modAccess` WHERE `modAccess`.`principal` = 4' at line 1
+)
+
+[2016-10-15 08:25:05] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1318) Could not get table class for class: modAccess
+[2016-10-15 08:25:05] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1287) Could not get table name for class: modAccess
+[2016-10-15 08:25:05] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS `modAccess` WHERE `modAccess`.`principal` = 6' at line 1
+)
+
+[2016-10-15 10:49:21] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1318) Could not get table class for class: modAccess
+[2016-10-15 10:49:21] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1287) Could not get table name for class: modAccess
+[2016-10-15 10:49:21] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS `modAccess` WHERE `modAccess`.`principal` = 7' at line 1
+)
+
+[2016-10-15 10:49:52] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1318) Could not get table class for class: modAccess
+[2016-10-15 10:49:52] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\xpdo.class.php : 1287) Could not get table name for class: modAccess
+[2016-10-15 10:49:52] (ERROR @ C:\wamp\www\ParentYakutskServer\core\xpdo\om\xpdoobject.class.php : 240) Error 42000 executing statement: 
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AS `modAccess` WHERE `modAccess`.`principal` = 8' at line 1
+)
+

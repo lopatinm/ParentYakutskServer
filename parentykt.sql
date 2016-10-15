@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 13 2016 г., 00:05
+-- Время создания: Окт 15 2016 г., 10:57
 -- Версия сервера: 5.6.17
 -- Версия PHP: 5.5.12
 
@@ -871,7 +871,7 @@ INSERT INTO `parentykt_content_type` (`id`, `name`, `description`, `mime_type`, 
 (4, 'CSS', 'CSS content', 'text/css', '.css', NULL, 0),
 (5, 'javascript', 'javascript content', 'text/javascript', '.js', NULL, 0),
 (6, 'RSS', 'For RSS feeds', 'application/rss+xml', '.rss', NULL, 0),
-(7, 'JSON', 'JSON', 'application/json', '.json', NULL, 0),
+(7, 'JSON', 'JSON', 'application/json', '', 'a:0:{}', 0),
 (8, 'PDF', 'PDF Files', 'application/pdf', '.pdf', NULL, 1);
 
 -- --------------------------------------------------------
@@ -1170,7 +1170,7 @@ CREATE TABLE IF NOT EXISTS `parentykt_manager_log` (
   `item` varchar(255) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `user_occurred` (`user`,`occurred`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=265 ;
 
 --
 -- Дамп данных таблицы `parentykt_manager_log`
@@ -1180,7 +1180,267 @@ INSERT INTO `parentykt_manager_log` (`id`, `user`, `occurred`, `action`, `classK
 (1, 1, '2016-10-12 23:26:38', 'login', 'modContext', 'mgr'),
 (2, 1, '2016-10-12 23:27:16', 'file_rename', '', 'C:/wamp/www/ParentYakutskServer/core/ht.access'),
 (3, 1, '2016-10-12 23:27:23', 'file_rename', '', 'C:/wamp/www/ParentYakutskServer/core/htaccess'),
-(4, 1, '2016-10-12 23:50:12', 'file_rename', '', 'C:/wamp/www/ParentYakutskServer/ht.access');
+(4, 1, '2016-10-12 23:50:12', 'file_rename', '', 'C:/wamp/www/ParentYakutskServer/ht.access'),
+(5, 1, '2016-10-13 17:07:01', 'login', 'modContext', 'mgr'),
+(6, 1, '2016-10-13 17:09:36', 'resource_create', 'modDocument', '2'),
+(7, 1, '2016-10-13 17:09:44', 'resource_update', 'modResource', '2'),
+(8, 1, '2016-10-13 17:24:27', 'resource_update', 'modResource', '2'),
+(9, 1, '2016-10-13 17:28:32', 'setting_update', 'modSystemSetting', 'use_alias_path'),
+(10, 1, '2016-10-13 17:28:36', 'setting_update', 'modSystemSetting', 'global_duplicate_uri_check'),
+(11, 1, '2016-10-13 17:28:38', 'setting_update', 'modSystemSetting', 'friendly_urls'),
+(12, 1, '2016-10-13 17:28:47', 'setting_update', 'modSystemSetting', 'friendly_alias_realtime'),
+(13, 1, '2016-10-13 17:29:14', 'setting_update', 'modSystemSetting', 'friendly_alias_translit'),
+(14, 1, '2016-10-13 17:30:14', 'content_type_save', 'modContentType', '7'),
+(15, 1, '2016-10-13 17:31:16', 'content_type_update', 'modContentType', '7'),
+(16, 1, '2016-10-13 17:32:29', 'resource_update', 'modResource', '2'),
+(17, 1, '2016-10-13 17:32:53', 'resource_update', 'modResource', '2'),
+(18, 1, '2016-10-13 17:33:08', 'resource_update', 'modResource', '2'),
+(19, 1, '2016-10-13 17:34:07', 'snippet_create', 'modSnippet', '1'),
+(20, 1, '2016-10-13 17:39:07', 'setting_update', 'modSystemSetting', 'ace.theme'),
+(21, 1, '2016-10-13 17:39:09', 'setting_update', 'modSystemSetting', 'ace.word_wrap'),
+(22, 1, '2016-10-13 17:39:15', 'setting_update', 'modSystemSetting', 'ace.word_wrap'),
+(23, 1, '2016-10-13 17:44:01', 'snippet_update', 'modSnippet', '1'),
+(24, 1, '2016-10-13 17:44:01', 'propertyset_update_from_element', 'modSnippet', '1'),
+(25, 1, '2016-10-13 17:44:37', 'snippet_update', 'modSnippet', '1'),
+(26, 1, '2016-10-13 17:44:37', 'propertyset_update_from_element', 'modSnippet', '1'),
+(27, 1, '2016-10-13 17:53:28', 'snippet_update', 'modSnippet', '1'),
+(28, 1, '2016-10-13 17:53:29', 'propertyset_update_from_element', 'modSnippet', '1'),
+(29, 1, '2016-10-13 17:53:40', 'snippet_update', 'modSnippet', '1'),
+(30, 1, '2016-10-13 17:53:41', 'propertyset_update_from_element', 'modSnippet', '1'),
+(31, 1, '2016-10-13 17:53:56', 'snippet_update', 'modSnippet', '1'),
+(32, 1, '2016-10-13 17:53:56', 'propertyset_update_from_element', 'modSnippet', '1'),
+(33, 1, '2016-10-13 17:54:44', 'snippet_update', 'modSnippet', '1'),
+(34, 1, '2016-10-13 17:54:45', 'propertyset_update_from_element', 'modSnippet', '1'),
+(35, 1, '2016-10-13 17:57:50', 'snippet_update', 'modSnippet', '1'),
+(36, 1, '2016-10-13 17:57:50', 'propertyset_update_from_element', 'modSnippet', '1'),
+(37, 1, '2016-10-13 17:57:57', 'snippet_update', 'modSnippet', '1'),
+(38, 1, '2016-10-13 17:57:57', 'propertyset_update_from_element', 'modSnippet', '1'),
+(39, 1, '2016-10-13 17:58:20', 'snippet_update', 'modSnippet', '1'),
+(40, 1, '2016-10-13 17:58:20', 'propertyset_update_from_element', 'modSnippet', '1'),
+(41, 1, '2016-10-13 17:59:13', 'snippet_update', 'modSnippet', '1'),
+(42, 1, '2016-10-13 17:59:13', 'propertyset_update_from_element', 'modSnippet', '1'),
+(43, 1, '2016-10-13 17:59:45', 'snippet_update', 'modSnippet', '1'),
+(44, 1, '2016-10-13 17:59:45', 'propertyset_update_from_element', 'modSnippet', '1'),
+(45, 1, '2016-10-13 17:59:48', 'snippet_update', 'modSnippet', '1'),
+(46, 1, '2016-10-13 17:59:48', 'propertyset_update_from_element', 'modSnippet', '1'),
+(47, 1, '2016-10-13 18:00:07', 'snippet_update', 'modSnippet', '1'),
+(48, 1, '2016-10-13 18:00:07', 'propertyset_update_from_element', 'modSnippet', '1'),
+(49, 1, '2016-10-13 18:12:29', 'snippet_duplicate', 'modSnippet', '2'),
+(50, 1, '2016-10-13 18:14:51', 'snippet_update', 'modSnippet', '2'),
+(51, 1, '2016-10-13 18:14:51', 'propertyset_update_from_element', 'modSnippet', '2'),
+(52, 1, '2016-10-13 18:20:54', 'snippet_update', 'modSnippet', '2'),
+(53, 1, '2016-10-13 18:20:54', 'propertyset_update_from_element', 'modSnippet', '2'),
+(54, 1, '2016-10-13 18:21:41', 'snippet_update', 'modSnippet', '1'),
+(55, 1, '2016-10-13 18:21:42', 'propertyset_update_from_element', 'modSnippet', '1'),
+(56, 1, '2016-10-13 18:22:59', 'snippet_update', 'modSnippet', '1'),
+(57, 1, '2016-10-13 18:23:00', 'propertyset_update_from_element', 'modSnippet', '1'),
+(58, 1, '2016-10-13 18:23:15', 'snippet_update', 'modSnippet', '1'),
+(59, 1, '2016-10-13 18:23:15', 'propertyset_update_from_element', 'modSnippet', '1'),
+(60, 1, '2016-10-13 18:28:29', 'snippet_update', 'modSnippet', '1'),
+(61, 1, '2016-10-13 18:28:30', 'propertyset_update_from_element', 'modSnippet', '1'),
+(62, 1, '2016-10-13 18:28:47', 'snippet_update', 'modSnippet', '2'),
+(63, 1, '2016-10-13 18:28:48', 'propertyset_update_from_element', 'modSnippet', '2'),
+(64, 1, '2016-10-13 18:29:56', 'snippet_update', 'modSnippet', '2'),
+(65, 1, '2016-10-13 18:29:57', 'propertyset_update_from_element', 'modSnippet', '2'),
+(66, 1, '2016-10-13 18:30:17', 'resource_update', 'modResource', '2'),
+(67, 1, '2016-10-13 18:31:59', 'snippet_update', 'modSnippet', '2'),
+(68, 1, '2016-10-13 18:32:00', 'propertyset_update_from_element', 'modSnippet', '2'),
+(69, 1, '2016-10-13 18:33:36', 'user_delete', 'modUser', '3'),
+(70, 1, '2016-10-13 18:47:31', 'snippet_duplicate', 'modSnippet', '3'),
+(71, 1, '2016-10-13 18:48:34', 'snippet_update', 'modSnippet', '3'),
+(72, 1, '2016-10-13 18:48:35', 'propertyset_update_from_element', 'modSnippet', '3'),
+(73, 1, '2016-10-13 18:50:25', 'snippet_update', 'modSnippet', '3'),
+(74, 1, '2016-10-13 18:50:25', 'propertyset_update_from_element', 'modSnippet', '3'),
+(75, 1, '2016-10-13 18:50:42', 'snippet_update', 'modSnippet', '3'),
+(76, 1, '2016-10-13 18:50:43', 'propertyset_update_from_element', 'modSnippet', '3'),
+(77, 1, '2016-10-13 18:50:44', 'resource_update', 'modResource', '2'),
+(78, 1, '2016-10-13 18:52:11', 'snippet_update', 'modSnippet', '3'),
+(79, 1, '2016-10-13 18:52:12', 'propertyset_update_from_element', 'modSnippet', '3'),
+(80, 1, '2016-10-13 23:25:20', 'plugin_create', 'modPlugin', '2'),
+(81, 1, '2016-10-13 23:31:27', 'plugin_update', 'modPlugin', '2'),
+(82, 1, '2016-10-13 23:31:28', 'propertyset_update_from_element', 'modPlugin', '2'),
+(83, 1, '2016-10-13 23:32:16', 'snippet_update', 'modSnippet', '3'),
+(84, 1, '2016-10-13 23:32:17', 'propertyset_update_from_element', 'modSnippet', '3'),
+(85, 1, '2016-10-13 23:37:37', 'plugin_update', 'modPlugin', '2'),
+(86, 1, '2016-10-13 23:37:37', 'propertyset_update_from_element', 'modPlugin', '2'),
+(87, 1, '2016-10-13 23:38:07', 'plugin_update', 'modPlugin', '2'),
+(88, 1, '2016-10-13 23:38:07', 'propertyset_update_from_element', 'modPlugin', '2'),
+(89, 1, '2016-10-13 23:42:18', 'plugin_update', 'modPlugin', '2'),
+(90, 1, '2016-10-13 23:42:18', 'propertyset_update_from_element', 'modPlugin', '2'),
+(91, 1, '2016-10-13 23:43:53', 'plugin_update', 'modPlugin', '2'),
+(92, 1, '2016-10-13 23:43:54', 'propertyset_update_from_element', 'modPlugin', '2'),
+(93, 1, '2016-10-13 23:44:06', 'plugin_update', 'modPlugin', '2'),
+(94, 1, '2016-10-13 23:44:07', 'propertyset_update_from_element', 'modPlugin', '2'),
+(95, 1, '2016-10-13 23:44:23', 'plugin_update', 'modPlugin', '2'),
+(96, 1, '2016-10-13 23:44:24', 'propertyset_update_from_element', 'modPlugin', '2'),
+(97, 1, '2016-10-13 23:48:06', 'plugin_update', 'modPlugin', '2'),
+(98, 1, '2016-10-13 23:48:07', 'propertyset_update_from_element', 'modPlugin', '2'),
+(99, 1, '2016-10-13 23:49:49', 'plugin_update', 'modPlugin', '2'),
+(100, 1, '2016-10-13 23:49:50', 'propertyset_update_from_element', 'modPlugin', '2'),
+(101, 1, '2016-10-13 23:50:19', 'plugin_update', 'modPlugin', '2'),
+(102, 1, '2016-10-13 23:50:19', 'propertyset_update_from_element', 'modPlugin', '2'),
+(103, 1, '2016-10-13 23:56:47', 'duplicate_resource', 'modDocument', '3'),
+(104, 1, '2016-10-13 23:57:12', 'resource_update', 'modResource', '3'),
+(105, 1, '2016-10-13 23:57:23', 'resource_update', 'modResource', '2'),
+(106, 1, '2016-10-14 00:01:50', 'plugin_update', 'modPlugin', '2'),
+(107, 1, '2016-10-14 00:01:50', 'propertyset_update_from_element', 'modPlugin', '2'),
+(108, 1, '2016-10-14 00:02:30', 'plugin_update', 'modPlugin', '2'),
+(109, 1, '2016-10-14 00:02:31', 'propertyset_update_from_element', 'modPlugin', '2'),
+(110, 1, '2016-10-14 00:03:03', 'plugin_update', 'modPlugin', '2'),
+(111, 1, '2016-10-14 00:03:03', 'propertyset_update_from_element', 'modPlugin', '2'),
+(112, 1, '2016-10-14 00:04:32', 'plugin_update', 'modPlugin', '2'),
+(113, 1, '2016-10-14 00:04:33', 'propertyset_update_from_element', 'modPlugin', '2'),
+(114, 1, '2016-10-14 00:06:44', 'plugin_update', 'modPlugin', '2'),
+(115, 1, '2016-10-14 00:06:44', 'propertyset_update_from_element', 'modPlugin', '2'),
+(116, 1, '2016-10-14 00:11:54', 'plugin_update', 'modPlugin', '2'),
+(117, 1, '2016-10-14 00:11:54', 'propertyset_update_from_element', 'modPlugin', '2'),
+(118, 1, '2016-10-14 00:12:37', 'plugin_update', 'modPlugin', '2'),
+(119, 1, '2016-10-14 00:12:37', 'propertyset_update_from_element', 'modPlugin', '2'),
+(120, 1, '2016-10-14 00:54:27', 'plugin_update', 'modPlugin', '2'),
+(121, 1, '2016-10-14 00:54:27', 'propertyset_update_from_element', 'modPlugin', '2'),
+(122, 1, '2016-10-14 01:30:00', 'plugin_update', 'modPlugin', '2'),
+(123, 1, '2016-10-14 01:30:00', 'propertyset_update_from_element', 'modPlugin', '2'),
+(124, 1, '2016-10-14 01:33:09', 'plugin_update', 'modPlugin', '2'),
+(125, 1, '2016-10-14 01:33:09', 'propertyset_update_from_element', 'modPlugin', '2'),
+(126, 1, '2016-10-14 01:51:19', 'plugin_update', 'modPlugin', '2'),
+(127, 1, '2016-10-14 01:51:19', 'propertyset_update_from_element', 'modPlugin', '2'),
+(128, 1, '2016-10-14 01:51:46', 'plugin_update', 'modPlugin', '2'),
+(129, 1, '2016-10-14 01:51:46', 'propertyset_update_from_element', 'modPlugin', '2'),
+(130, 1, '2016-10-14 01:52:04', 'plugin_update', 'modPlugin', '2'),
+(131, 1, '2016-10-14 01:52:04', 'propertyset_update_from_element', 'modPlugin', '2'),
+(132, 1, '2016-10-14 02:45:08', 'plugin_update', 'modPlugin', '2'),
+(133, 1, '2016-10-14 02:45:08', 'propertyset_update_from_element', 'modPlugin', '2'),
+(134, 1, '2016-10-14 02:49:11', 'plugin_update', 'modPlugin', '2'),
+(135, 1, '2016-10-14 02:49:12', 'propertyset_update_from_element', 'modPlugin', '2'),
+(136, 1, '2016-10-15 07:40:42', 'login', 'modContext', 'mgr'),
+(137, 1, '2016-10-15 07:42:03', 'plugin_update', 'modPlugin', '2'),
+(138, 1, '2016-10-15 07:42:03', 'propertyset_update_from_element', 'modPlugin', '2'),
+(139, 1, '2016-10-15 07:42:25', 'plugin_update', 'modPlugin', '2'),
+(140, 1, '2016-10-15 07:42:25', 'propertyset_update_from_element', 'modPlugin', '2'),
+(141, 1, '2016-10-15 07:42:35', 'plugin_update', 'modPlugin', '2'),
+(142, 1, '2016-10-15 07:42:35', 'propertyset_update_from_element', 'modPlugin', '2'),
+(143, 1, '2016-10-15 07:43:50', 'plugin_update', 'modPlugin', '2'),
+(144, 1, '2016-10-15 07:43:50', 'propertyset_update_from_element', 'modPlugin', '2'),
+(145, 1, '2016-10-15 07:44:18', 'plugin_update', 'modPlugin', '2'),
+(146, 1, '2016-10-15 07:44:18', 'propertyset_update_from_element', 'modPlugin', '2'),
+(147, 1, '2016-10-15 07:44:45', 'plugin_update', 'modPlugin', '2'),
+(148, 1, '2016-10-15 07:44:46', 'propertyset_update_from_element', 'modPlugin', '2'),
+(149, 1, '2016-10-15 08:04:23', 'snippet_update', 'modSnippet', '3'),
+(150, 1, '2016-10-15 08:04:24', 'propertyset_update_from_element', 'modSnippet', '3'),
+(151, 1, '2016-10-15 08:04:46', 'plugin_update', 'modPlugin', '2'),
+(152, 1, '2016-10-15 08:04:46', 'propertyset_update_from_element', 'modPlugin', '2'),
+(153, 1, '2016-10-15 08:07:27', 'plugin_update', 'modPlugin', '2'),
+(154, 1, '2016-10-15 08:07:27', 'propertyset_update_from_element', 'modPlugin', '2'),
+(155, 1, '2016-10-15 08:08:29', 'plugin_update', 'modPlugin', '2'),
+(156, 1, '2016-10-15 08:08:29', 'propertyset_update_from_element', 'modPlugin', '2'),
+(157, 1, '2016-10-15 08:09:04', 'plugin_update', 'modPlugin', '2'),
+(158, 1, '2016-10-15 08:09:05', 'propertyset_update_from_element', 'modPlugin', '2'),
+(159, 1, '2016-10-15 08:09:45', 'plugin_update', 'modPlugin', '2'),
+(160, 1, '2016-10-15 08:09:45', 'propertyset_update_from_element', 'modPlugin', '2'),
+(161, 1, '2016-10-15 08:09:54', 'plugin_update', 'modPlugin', '2'),
+(162, 1, '2016-10-15 08:09:54', 'propertyset_update_from_element', 'modPlugin', '2'),
+(163, 1, '2016-10-15 08:10:06', 'plugin_update', 'modPlugin', '2'),
+(164, 1, '2016-10-15 08:10:07', 'propertyset_update_from_element', 'modPlugin', '2'),
+(165, 1, '2016-10-15 08:10:19', 'plugin_update', 'modPlugin', '2'),
+(166, 1, '2016-10-15 08:10:19', 'propertyset_update_from_element', 'modPlugin', '2'),
+(167, 1, '2016-10-15 08:10:30', 'plugin_update', 'modPlugin', '2'),
+(168, 1, '2016-10-15 08:10:30', 'propertyset_update_from_element', 'modPlugin', '2'),
+(169, 1, '2016-10-15 08:10:55', 'plugin_update', 'modPlugin', '2'),
+(170, 1, '2016-10-15 08:10:55', 'propertyset_update_from_element', 'modPlugin', '2'),
+(171, 1, '2016-10-15 08:11:51', 'plugin_update', 'modPlugin', '2'),
+(172, 1, '2016-10-15 08:11:51', 'propertyset_update_from_element', 'modPlugin', '2'),
+(173, 1, '2016-10-15 08:15:17', 'plugin_update', 'modPlugin', '2'),
+(174, 1, '2016-10-15 08:15:17', 'propertyset_update_from_element', 'modPlugin', '2'),
+(175, 1, '2016-10-15 08:15:32', 'snippet_update', 'modSnippet', '3'),
+(176, 1, '2016-10-15 08:15:32', 'propertyset_update_from_element', 'modSnippet', '3'),
+(177, 1, '2016-10-15 08:17:24', 'snippet_update', 'modSnippet', '3'),
+(178, 1, '2016-10-15 08:17:25', 'propertyset_update_from_element', 'modSnippet', '3'),
+(179, 1, '2016-10-15 08:19:56', 'plugin_update', 'modPlugin', '2'),
+(180, 1, '2016-10-15 08:19:56', 'propertyset_update_from_element', 'modPlugin', '2'),
+(181, 1, '2016-10-15 08:20:25', 'plugin_update', 'modPlugin', '2'),
+(182, 1, '2016-10-15 08:20:26', 'propertyset_update_from_element', 'modPlugin', '2'),
+(183, 1, '2016-10-15 08:21:05', 'snippet_update', 'modSnippet', '3'),
+(184, 1, '2016-10-15 08:21:06', 'propertyset_update_from_element', 'modSnippet', '3'),
+(185, 1, '2016-10-15 08:23:14', 'snippet_update', 'modSnippet', '3'),
+(186, 1, '2016-10-15 08:23:15', 'propertyset_update_from_element', 'modSnippet', '3'),
+(187, 1, '2016-10-15 08:26:13', 'snippet_duplicate', 'modSnippet', '4'),
+(188, 1, '2016-10-15 08:26:46', 'resource_update', 'modResource', '3'),
+(189, 1, '2016-10-15 08:27:50', 'snippet_update', 'modSnippet', '4'),
+(190, 1, '2016-10-15 08:27:50', 'propertyset_update_from_element', 'modSnippet', '4'),
+(191, 1, '2016-10-15 08:33:24', 'snippet_duplicate', 'modSnippet', '5'),
+(192, 1, '2016-10-15 08:33:54', 'resource_update', 'modResource', '3'),
+(193, 1, '2016-10-15 09:17:31', 'snippet_update', 'modSnippet', '5'),
+(194, 1, '2016-10-15 09:17:32', 'propertyset_update_from_element', 'modSnippet', '5'),
+(195, 1, '2016-10-15 09:18:38', 'snippet_update', 'modSnippet', '5'),
+(196, 1, '2016-10-15 09:18:38', 'propertyset_update_from_element', 'modSnippet', '5'),
+(197, 1, '2016-10-15 09:19:02', 'snippet_update', 'modSnippet', '5'),
+(198, 1, '2016-10-15 09:19:03', 'propertyset_update_from_element', 'modSnippet', '5'),
+(199, 1, '2016-10-15 09:19:30', 'snippet_update', 'modSnippet', '5'),
+(200, 1, '2016-10-15 09:19:30', 'propertyset_update_from_element', 'modSnippet', '5'),
+(201, 1, '2016-10-15 09:19:52', 'snippet_update', 'modSnippet', '5'),
+(202, 1, '2016-10-15 09:19:52', 'propertyset_update_from_element', 'modSnippet', '5'),
+(203, 1, '2016-10-15 09:20:00', 'snippet_update', 'modSnippet', '5'),
+(204, 1, '2016-10-15 09:20:01', 'propertyset_update_from_element', 'modSnippet', '5'),
+(205, 1, '2016-10-15 09:20:48', 'snippet_update', 'modSnippet', '5'),
+(206, 1, '2016-10-15 09:20:49', 'propertyset_update_from_element', 'modSnippet', '5'),
+(207, 1, '2016-10-15 09:21:17', 'snippet_update', 'modSnippet', '5'),
+(208, 1, '2016-10-15 09:21:18', 'propertyset_update_from_element', 'modSnippet', '5'),
+(209, 1, '2016-10-15 09:21:24', 'snippet_update', 'modSnippet', '5'),
+(210, 1, '2016-10-15 09:21:24', 'propertyset_update_from_element', 'modSnippet', '5'),
+(211, 1, '2016-10-15 09:21:44', 'snippet_update', 'modSnippet', '5'),
+(212, 1, '2016-10-15 09:21:44', 'propertyset_update_from_element', 'modSnippet', '5'),
+(213, 1, '2016-10-15 09:22:05', 'snippet_update', 'modSnippet', '5'),
+(214, 1, '2016-10-15 09:22:05', 'propertyset_update_from_element', 'modSnippet', '5'),
+(215, 1, '2016-10-15 09:22:09', 'snippet_update', 'modSnippet', '5'),
+(216, 1, '2016-10-15 09:22:09', 'propertyset_update_from_element', 'modSnippet', '5'),
+(217, 1, '2016-10-15 09:40:09', 'snippet_update', 'modSnippet', '5'),
+(218, 1, '2016-10-15 09:40:09', 'propertyset_update_from_element', 'modSnippet', '5'),
+(219, 1, '2016-10-15 09:40:35', 'snippet_update', 'modSnippet', '5'),
+(220, 1, '2016-10-15 09:40:35', 'propertyset_update_from_element', 'modSnippet', '5'),
+(221, 1, '2016-10-15 09:41:00', 'snippet_update', 'modSnippet', '5'),
+(222, 1, '2016-10-15 09:41:01', 'propertyset_update_from_element', 'modSnippet', '5'),
+(223, 1, '2016-10-15 10:09:01', 'snippet_update', 'modSnippet', '5'),
+(224, 1, '2016-10-15 10:09:01', 'propertyset_update_from_element', 'modSnippet', '5'),
+(225, 1, '2016-10-15 10:09:41', 'snippet_update', 'modSnippet', '5'),
+(226, 1, '2016-10-15 10:09:42', 'propertyset_update_from_element', 'modSnippet', '5'),
+(227, 1, '2016-10-15 10:10:31', 'snippet_update', 'modSnippet', '5'),
+(228, 1, '2016-10-15 10:10:31', 'propertyset_update_from_element', 'modSnippet', '5'),
+(229, 1, '2016-10-15 10:24:58', 'snippet_update', 'modSnippet', '5'),
+(230, 1, '2016-10-15 10:24:58', 'propertyset_update_from_element', 'modSnippet', '5'),
+(231, 1, '2016-10-15 10:26:49', 'snippet_update', 'modSnippet', '5'),
+(232, 1, '2016-10-15 10:26:49', 'propertyset_update_from_element', 'modSnippet', '5'),
+(233, 1, '2016-10-15 10:26:58', 'snippet_update', 'modSnippet', '5'),
+(234, 1, '2016-10-15 10:26:58', 'propertyset_update_from_element', 'modSnippet', '5'),
+(235, 1, '2016-10-15 10:27:01', 'snippet_update', 'modSnippet', '5'),
+(236, 1, '2016-10-15 10:27:01', 'propertyset_update_from_element', 'modSnippet', '5'),
+(237, 1, '2016-10-15 10:28:02', 'snippet_update', 'modSnippet', '5'),
+(238, 1, '2016-10-15 10:28:03', 'propertyset_update_from_element', 'modSnippet', '5'),
+(239, 1, '2016-10-15 10:28:28', 'snippet_update', 'modSnippet', '5'),
+(240, 1, '2016-10-15 10:28:29', 'propertyset_update_from_element', 'modSnippet', '5'),
+(241, 1, '2016-10-15 10:28:46', 'snippet_update', 'modSnippet', '5'),
+(242, 1, '2016-10-15 10:28:47', 'propertyset_update_from_element', 'modSnippet', '5'),
+(243, 1, '2016-10-15 10:30:01', 'snippet_update', 'modSnippet', '5'),
+(244, 1, '2016-10-15 10:30:02', 'propertyset_update_from_element', 'modSnippet', '5'),
+(245, 1, '2016-10-15 10:30:13', 'snippet_update', 'modSnippet', '5'),
+(246, 1, '2016-10-15 10:30:13', 'propertyset_update_from_element', 'modSnippet', '5'),
+(247, 1, '2016-10-15 10:30:42', 'snippet_update', 'modSnippet', '5'),
+(248, 1, '2016-10-15 10:30:42', 'propertyset_update_from_element', 'modSnippet', '5'),
+(249, 1, '2016-10-15 10:31:41', 'snippet_update', 'modSnippet', '5'),
+(250, 1, '2016-10-15 10:31:41', 'propertyset_update_from_element', 'modSnippet', '5'),
+(251, 1, '2016-10-15 10:32:02', 'snippet_update', 'modSnippet', '5'),
+(252, 1, '2016-10-15 10:32:02', 'propertyset_update_from_element', 'modSnippet', '5'),
+(253, 1, '2016-10-15 10:34:12', 'snippet_update', 'modSnippet', '5'),
+(254, 1, '2016-10-15 10:34:12', 'propertyset_update_from_element', 'modSnippet', '5'),
+(255, 1, '2016-10-15 10:34:23', 'snippet_update', 'modSnippet', '5'),
+(256, 1, '2016-10-15 10:34:24', 'propertyset_update_from_element', 'modSnippet', '5'),
+(257, 1, '2016-10-15 10:38:30', 'snippet_update', 'modSnippet', '5'),
+(258, 1, '2016-10-15 10:38:30', 'propertyset_update_from_element', 'modSnippet', '5'),
+(259, 1, '2016-10-15 10:38:41', 'snippet_update', 'modSnippet', '5'),
+(260, 1, '2016-10-15 10:38:42', 'propertyset_update_from_element', 'modSnippet', '5'),
+(261, 1, '2016-10-15 10:40:38', 'snippet_update', 'modSnippet', '5'),
+(262, 1, '2016-10-15 10:40:39', 'propertyset_update_from_element', 'modSnippet', '5'),
+(263, 1, '2016-10-15 10:45:32', 'snippet_update', 'modSnippet', '5'),
+(264, 1, '2016-10-15 10:45:32', 'propertyset_update_from_element', 'modSnippet', '5');
 
 -- --------------------------------------------------------
 
@@ -1373,7 +1633,9 @@ CREATE TABLE IF NOT EXISTS `parentykt_namespaces` (
 --
 
 INSERT INTO `parentykt_namespaces` (`name`, `path`, `assets_path`) VALUES
-('core', '{core_path}', '{assets_path}');
+('core', '{core_path}', '{assets_path}'),
+('translit', '{core_path}components/translit/', ''),
+('ace', '{core_path}components/ace/', '');
 
 -- --------------------------------------------------------
 
@@ -1428,14 +1690,15 @@ CREATE TABLE IF NOT EXISTS `parentykt_register_queues` (
   `options` mediumtext,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `parentykt_register_queues`
 --
 
 INSERT INTO `parentykt_register_queues` (`id`, `name`, `options`) VALUES
-(2, 'locks', 'a:1:{s:9:"directory";s:5:"locks";}');
+(2, 'locks', 'a:1:{s:9:"directory";s:5:"locks";}'),
+(3, 'resource_reload', 'a:1:{s:9:"directory";s:15:"resource_reload";}');
 
 -- --------------------------------------------------------
 
@@ -1453,7 +1716,15 @@ CREATE TABLE IF NOT EXISTS `parentykt_register_topics` (
   PRIMARY KEY (`id`),
   KEY `queue` (`queue`),
   KEY `name` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `parentykt_register_topics`
+--
+
+INSERT INTO `parentykt_register_topics` (`id`, `queue`, `name`, `created`, `updated`, `options`) VALUES
+(1, 3, '/resourcereload/', '2016-10-13 17:09:24', NULL, NULL),
+(2, 2, '/resource/', '2016-10-13 17:09:36', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1474,7 +1745,10 @@ CREATE TABLE IF NOT EXISTS `parentykt_session` (
 --
 
 INSERT INTO `parentykt_session` (`id`, `access`, `data`) VALUES
-('qg3ivjd39cifp0m8q55440m8r1', 1476307602, 'modx.user.contextTokens|a:1:{s:3:"mgr";i:1;}modx.mgr.user.token|s:52:"modx57feaa788edb28.44129148_157feaa8e3c1ee0.63113537";modx.mgr.session.cookie.lifetime|i:0;modx.mgr.user.config|a:0:{}');
+('qg3ivjd39cifp0m8q55440m8r1', 1476307602, 'modx.user.contextTokens|a:1:{s:3:"mgr";i:1;}modx.mgr.user.token|s:52:"modx57feaa788edb28.44129148_157feaa8e3c1ee0.63113537";modx.mgr.session.cookie.lifetime|i:0;modx.mgr.user.config|a:0:{}'),
+('cb6e4k0847qait4amr4sbj6354', 1476376416, 'modx.user.contextTokens|a:1:{s:3:"mgr";i:1;}modx.mgr.user.token|s:52:"modx57feaa788edb28.44129148_157ffa315730737.95681735";modx.mgr.session.cookie.lifetime|i:0;modx.mgr.user.config|a:0:{}modx.user.1.userGroups|a:1:{i:0;i:1;}newResourceTokens|a:8:{i:0;s:23:"57ffa3969ea6b5.14306609";i:1;s:23:"57ffa3a53fa449.83675040";i:2;s:23:"57ffa3b2565445.73568904";i:3;s:23:"57ffa721a502a4.42076085";i:4;s:23:"57ffa89e2a0337.47920188";i:5;s:23:"57ffa9024caaf5.83681906";i:6;s:23:"57ffa91102f6a4.89729711";i:7;s:23:"57ffac5db39c96.69767235";}modx.user.3.userGroupNames|a:0:{}'),
+('ucrfio1mg9buh2ol0m9uqgill3', 1476375064, 'modx.user.0.resourceGroups|a:1:{s:3:"web";a:0:{}}modx.user.0.attributes|a:1:{s:3:"web";a:5:{s:16:"modAccessContext";a:1:{s:3:"web";a:1:{i:0;a:3:{s:9:"principal";i:0;s:9:"authority";s:1:"0";s:6:"policy";a:1:{s:4:"load";b:1;}}}}s:22:"modAccessResourceGroup";a:0:{}s:17:"modAccessCategory";a:0:{}s:28:"sources.modAccessMediaSource";a:0:{}s:18:"modAccessNamespace";a:0:{}}}modx.user.contextTokens|a:0:{}'),
+('aacvp1c62kfn62frdan2db0072', 1476510053, 'modx.user.contextTokens|a:1:{s:3:"mgr";i:1;}modx.mgr.user.token|s:52:"modx57feaa788edb28.44129148_15801c15a40e247.14933085";modx.mgr.session.cookie.lifetime|i:0;modx.mgr.user.config|a:0:{}');
 
 -- --------------------------------------------------------
 
@@ -1546,14 +1820,16 @@ CREATE TABLE IF NOT EXISTS `parentykt_site_content` (
   KEY `show_in_tree` (`show_in_tree`),
   KEY `cache_refresh_idx` (`parent`,`menuindex`,`id`),
   FULLTEXT KEY `content_ft_idx` (`pagetitle`,`longtitle`,`description`,`introtext`,`content`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `parentykt_site_content`
 --
 
 INSERT INTO `parentykt_site_content` (`id`, `type`, `contentType`, `pagetitle`, `longtitle`, `description`, `alias`, `link_attributes`, `published`, `pub_date`, `unpub_date`, `parent`, `isfolder`, `introtext`, `content`, `richtext`, `template`, `menuindex`, `searchable`, `cacheable`, `createdby`, `createdon`, `editedby`, `editedon`, `deleted`, `deletedon`, `deletedby`, `publishedon`, `publishedby`, `menutitle`, `donthit`, `privateweb`, `privatemgr`, `content_dispo`, `hidemenu`, `class_key`, `context_key`, `content_type`, `uri`, `uri_override`, `hide_children_in_tree`, `show_in_tree`, `properties`) VALUES
-(1, 'document', 'text/html', 'Главная', 'Поздравляем!', '', 'index', '', 1, 0, 0, 0, 0, NULL, '<p>You have successfully installed MODX Revolution&nbsp;[[++settings_version]]!</p>\n<p>Now that MODX is installed you can login to the manager to create your templates, manage content and install third party extras to add functionality to your&nbsp;website. </p>\n\n<h2>New to&nbsp;MODX?</h2>\n\n<p>Pages on a MODX site are called <a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/structuring-your-site/resources">Resources</a>, and are visible on the left-hand side of the manager in the Resources tab. Resources can be nested under other resources, making it easy to create a tree of resources. There are different types of resources for different use&nbsp;cases.</p>\n\n<p>Building your website is done through a combination of <b>Templates</b>, <b>Template Variables</b>, <b>Chunks</b>, <b>Snippets</b> and <b>Plugins</b>. Collectively these are known as <b>Elements</b>, and can also be found in the left-hand side of the manager, in the Elements&nbsp;tab.</p>\n\n<p><a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/structuring-your-site/templates">Templates</a> contain the outer markup of any page. Each resource can only be assigned to a single template at a time. By adding <a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/customizing-content/template-variables">Template Variables</a> to a template, you can add custom fields for any resource using that particular&nbsp;template.</p>\n\n<p>With <a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/structuring-your-site/chunks">Chunks</a> you can share parts of the markup, such as a header, across different templates. <a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/structuring-your-site/using-snippets">Snippets</a> are pieces of PHP that return dynamic content, such as summaries of other resources or the current date. With snippets, you will often use Chunks to mark up the pieces of content it returns, instead of mixing the PHP and&nbsp;HTML.</p>\n\n<p>Finally, <a href="https://rtfm.modx.com/revolution/2.x/developing-in-modx/basic-development/plugins">Plugins</a> enable more advanced features by hooking into the extensive events system provided by&nbsp;MODX.</p>\n\n<p>To learn more about MODX, be sure to check out the <a href="https://rtfm.modx.com/revolution/2.x/getting-started">Getting Started</a> section in the official&nbsp;documentation.</p>\n', 1, 1, 0, 1, 1, 1, 1476307584, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 'modDocument', 'web', 1, NULL, 0, 0, 1, NULL);
+(1, 'document', 'text/html', 'Главная', 'Поздравляем!', '', 'index', '', 1, 0, 0, 0, 0, NULL, '<p>You have successfully installed MODX Revolution&nbsp;[[++settings_version]]!</p>\n<p>Now that MODX is installed you can login to the manager to create your templates, manage content and install third party extras to add functionality to your&nbsp;website. </p>\n\n<h2>New to&nbsp;MODX?</h2>\n\n<p>Pages on a MODX site are called <a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/structuring-your-site/resources">Resources</a>, and are visible on the left-hand side of the manager in the Resources tab. Resources can be nested under other resources, making it easy to create a tree of resources. There are different types of resources for different use&nbsp;cases.</p>\n\n<p>Building your website is done through a combination of <b>Templates</b>, <b>Template Variables</b>, <b>Chunks</b>, <b>Snippets</b> and <b>Plugins</b>. Collectively these are known as <b>Elements</b>, and can also be found in the left-hand side of the manager, in the Elements&nbsp;tab.</p>\n\n<p><a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/structuring-your-site/templates">Templates</a> contain the outer markup of any page. Each resource can only be assigned to a single template at a time. By adding <a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/customizing-content/template-variables">Template Variables</a> to a template, you can add custom fields for any resource using that particular&nbsp;template.</p>\n\n<p>With <a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/structuring-your-site/chunks">Chunks</a> you can share parts of the markup, such as a header, across different templates. <a href="https://rtfm.modx.com/revolution/2.x/making-sites-with-modx/structuring-your-site/using-snippets">Snippets</a> are pieces of PHP that return dynamic content, such as summaries of other resources or the current date. With snippets, you will often use Chunks to mark up the pieces of content it returns, instead of mixing the PHP and&nbsp;HTML.</p>\n\n<p>Finally, <a href="https://rtfm.modx.com/revolution/2.x/developing-in-modx/basic-development/plugins">Plugins</a> enable more advanced features by hooking into the extensive events system provided by&nbsp;MODX.</p>\n\n<p>To learn more about MODX, be sure to check out the <a href="https://rtfm.modx.com/revolution/2.x/getting-started">Getting Started</a> section in the official&nbsp;documentation.</p>\n', 1, 1, 0, 1, 1, 1, 1476307584, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 'modDocument', 'web', 1, 'index.html', 0, 0, 1, NULL),
+(2, 'document', 'application/json', 'users', '', '', 'users', '', 1, 0, 0, 0, 0, '', '[[!getUsers]]', 0, 0, 1, 0, 0, 1, 1476371376, 1, 1476395843, 0, 0, 0, 1476371340, 1, '', 0, 0, 0, 0, 0, 'modDocument', 'web', 7, 'users', 0, 0, 1, NULL),
+(3, 'document', 'application/json', 'user', '', '', 'user', '', 1, 0, 0, 0, 0, '', '[[!addUser]][[!deleteUser]][[!getUser]][[!editUser]]', 0, 0, 1, 0, 0, 1, 1476395807, 1, 1476513234, 0, 0, 0, 1476371340, 1, '', 0, 0, 0, 0, 0, 'modDocument', 'web', 7, 'user', 0, 0, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -1610,7 +1886,15 @@ CREATE TABLE IF NOT EXISTS `parentykt_site_plugins` (
   KEY `locked` (`locked`),
   KEY `disabled` (`disabled`),
   KEY `static` (`static`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `parentykt_site_plugins`
+--
+
+INSERT INTO `parentykt_site_plugins` (`id`, `source`, `property_preprocess`, `name`, `description`, `editor_type`, `category`, `cache_type`, `plugincode`, `locked`, `properties`, `disabled`, `moduleguid`, `static`, `static_file`) VALUES
+(1, 0, 0, 'Ace', 'Ace code editor plugin for MODx Revolution', 0, 0, 0, '/**\n * Ace Source Editor Plugin\n *\n * Events: OnManagerPageBeforeRender, OnRichTextEditorRegister, OnSnipFormPrerender,\n * OnTempFormPrerender, OnChunkFormPrerender, OnPluginFormPrerender,\n * OnFileCreateFormPrerender, OnFileEditFormPrerender, OnDocFormPrerender\n *\n * @author Danil Kostin <danya.postfactum(at)gmail.com>\n *\n * @package ace\n *\n * @var array $scriptProperties\n * @var Ace $ace\n */\nif ($modx->event->name == ''OnRichTextEditorRegister'') {\n    $modx->event->output(''Ace'');\n    return;\n}\n\nif ($modx->getOption(''which_element_editor'', null, ''Ace'') !== ''Ace'') {\n    return;\n}\n\n$ace = $modx->getService(''ace'', ''Ace'', $modx->getOption(''ace.core_path'', null, $modx->getOption(''core_path'').''components/ace/'').''model/ace/'');\n$ace->initialize();\n\n$extensionMap = array(\n    ''tpl''   => ''text/x-smarty'',\n    ''htm''   => ''text/html'',\n    ''html''  => ''text/html'',\n    ''css''   => ''text/css'',\n    ''scss''  => ''text/x-scss'',\n    ''less''  => ''text/x-less'',\n    ''svg''   => ''image/svg+xml'',\n    ''xml''   => ''application/xml'',\n    ''xsl''   => ''application/xml'',\n    ''js''    => ''application/javascript'',\n    ''json''  => ''application/json'',\n    ''php''   => ''application/x-php'',\n    ''sql''   => ''text/x-sql'',\n    ''md''    => ''text/x-markdown'',\n    ''txt''   => ''text/plain'',\n    ''twig''  => ''text/x-twig''\n);\n\n// Defines wether we should highlight modx tags\n$modxTags = false;\nswitch ($modx->event->name) {\n    case ''OnSnipFormPrerender'':\n        $field = ''modx-snippet-snippet'';\n        $mimeType = ''application/x-php'';\n        break;\n    case ''OnTempFormPrerender'':\n        $field = ''modx-template-content'';\n        $modxTags = true;\n\n        switch (true) {\n            case $modx->getOption(''twiggy_class''):\n                $mimeType = ''text/x-twig'';\n                break;\n            case $modx->getOption(''pdotools_fenom_parser''):\n                $mimeType = ''text/x-smarty'';\n                break;\n            default:\n                $mimeType = ''text/html'';\n                break;\n        }\n\n        break;\n    case ''OnChunkFormPrerender'':\n        $field = ''modx-chunk-snippet'';\n        if ($modx->controller->chunk && $modx->controller->chunk->isStatic()) {\n            $extension = pathinfo($modx->controller->chunk->getSourceFile(), PATHINFO_EXTENSION);\n            $mimeType = isset($extensionMap[$extension]) ? $extensionMap[$extension] : ''text/plain'';\n        } else {\n            $mimeType = ''text/html'';\n        }\n        $modxTags = true;\n\n        switch (true) {\n            case $modx->getOption(''twiggy_class''):\n                $mimeType = ''text/x-twig'';\n                break;\n            case $modx->getOption(''pdotools_fenom_default''):\n                $mimeType = ''text/x-smarty'';\n                break;\n            default:\n                $mimeType = ''text/html'';\n                break;\n        }\n\n        break;\n    case ''OnPluginFormPrerender'':\n        $field = ''modx-plugin-plugincode'';\n        $mimeType = ''application/x-php'';\n        break;\n    case ''OnFileCreateFormPrerender'':\n        $field = ''modx-file-content'';\n        $mimeType = ''text/plain'';\n        break;\n    case ''OnFileEditFormPrerender'':\n        $field = ''modx-file-content'';\n        $extension = pathinfo($scriptProperties[''file''], PATHINFO_EXTENSION);\n        $mimeType = isset($extensionMap[$extension])\n            ? $extensionMap[$extension]\n            : ''text/plain'';\n        $modxTags = $extension == ''tpl'';\n        break;\n    case ''OnDocFormPrerender'':\n        if (!$modx->controller->resourceArray) {\n            return;\n        }\n        $field = ''ta'';\n        $mimeType = $modx->getObject(''modContentType'', $modx->controller->resourceArray[''content_type''])->get(''mime_type'');\n\n        switch (true) {\n            case $mimeType == ''text/html'' && $modx->getOption(''twiggy_class''):\n                $mimeType = ''text/x-twig'';\n                break;\n            case $mimeType == ''text/html'' && $modx->getOption(''pdotools_fenom_parser''):\n                $mimeType = ''text/x-smarty'';\n                break;\n        }\n\n        if ($modx->getOption(''use_editor'')){\n            $richText = $modx->controller->resourceArray[''richtext''];\n            $classKey = $modx->controller->resourceArray[''class_key''];\n            if ($richText || in_array($classKey, array(''modStaticResource'',''modSymLink'',''modWebLink'',''modXMLRPCResource''))) {\n                $field = false;\n            }\n        }\n        $modxTags = true;\n        break;\n    default:\n        return;\n}\n\n$modxTags = (int) $modxTags;\n$script = '''';\nif ($field) {\n    $script .= "MODx.ux.Ace.replaceComponent(''$field'', ''$mimeType'', $modxTags);";\n}\n\nif ($modx->event->name == ''OnDocFormPrerender'' && !$modx->getOption(''use_editor'')) {\n    $script .= "MODx.ux.Ace.replaceTextAreas(Ext.query(''.modx-richtext''));";\n}\n\nif ($script) {\n    $modx->controller->addHtml(''<script>Ext.onReady(function() {'' . $script . ''});</script>'');\n}', 0, NULL, 0, '', 0, 'ace/elements/plugins/ace.plugin.php'),
+(2, 1, 0, 'setParams', '', 0, 0, 0, '$method = $_SERVER[''REQUEST_METHOD''];\nif($method == ''DELETE'' || $method == ''PUT'' || $method == ''GET'' || $method == ''POST''){\n    $alias = $modx->context->getOption(''request_param_alias'', ''q'');\n    if (!isset($_REQUEST[$alias])) {return false;}\n    $request = $_REQUEST[$alias];\n    $resourceAlias = explode(''/'', $request);\n    if(isset($resourceAlias[1])){\n        $_REQ[''id''] = $resourceAlias[1];\n    }\n    $query = $modx->newQuery(''modResource'');\n    $query->where(array(''alias'' => $resourceAlias[0]));\n    $resource = $modx->getObject(''modResource'', $query);\n    \n    $modx->resource = $modx->newObject(''modResource'');\n    $modx->resource = $resource;\n    $modx->resourceIdentifier = $modx->resource->get(''id'');\n    $modx->resourceMethod = ''id'';\n    $modx->request->prepareResponse();\n}', 0, 'a:0:{}', 0, '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -1626,6 +1910,23 @@ CREATE TABLE IF NOT EXISTS `parentykt_site_plugin_events` (
   PRIMARY KEY (`pluginid`,`event`),
   KEY `priority` (`priority`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `parentykt_site_plugin_events`
+--
+
+INSERT INTO `parentykt_site_plugin_events` (`pluginid`, `event`, `priority`, `propertyset`) VALUES
+(1, 'OnChunkFormPrerender', 0, 0),
+(1, 'OnPluginFormPrerender', 0, 0),
+(1, 'OnSnipFormPrerender', 0, 0),
+(1, 'OnTempFormPrerender', 0, 0),
+(1, 'OnFileEditFormPrerender', 0, 0),
+(1, 'OnFileCreateFormPrerender', 0, 0),
+(1, 'OnDocFormPrerender', 0, 0),
+(1, 'OnRichTextEditorRegister', 0, 0),
+(1, 'OnManagerPageBeforeRender', 0, 0),
+(2, 'OnWebPageInit', 0, 0),
+(2, 'OnPageNotFound', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1654,7 +1955,18 @@ CREATE TABLE IF NOT EXISTS `parentykt_site_snippets` (
   KEY `locked` (`locked`),
   KEY `moduleguid` (`moduleguid`),
   KEY `static` (`static`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Дамп данных таблицы `parentykt_site_snippets`
+--
+
+INSERT INTO `parentykt_site_snippets` (`id`, `source`, `property_preprocess`, `name`, `description`, `editor_type`, `category`, `cache_type`, `snippet`, `locked`, `properties`, `moduleguid`, `static`, `static_file`) VALUES
+(1, 1, 0, 'getUsers', '', 0, 0, 0, '$method = $_SERVER[''REQUEST_METHOD''];\nif($method == ''GET''){\n    $q = $modx->newQuery(''modUser'');\n    $usersCollection = $modx->getCollection(''modUser'', $q);\n    $i = 0;\n    $result[''result''] = ''success'';\n    foreach($usersCollection as $user){\n        $result[''users''][$i][''name''] = $user->get(''username'');\n        $result[''users''][$i][''id''] = $user->get(''id'');\n        $i++;\n    }\n    \n    return json_encode($result);\n}', 0, 'a:0:{}', '', 0, ''),
+(2, 1, 0, 'addUser', '', 0, 0, 0, '$method = $_SERVER[''REQUEST_METHOD''];\nif($method == ''POST''){\n    $user = $modx->newObject(''modUser'');\n    $user->set(''username'', $_POST[''username'']);\n    $user->set(''password'', $_POST[''password'']);\n    $user->save();\n    $profile = $modx->newObject(''modUserProfile'');\n    $profile->set(''fullname'', $_POST[''fullname'']);\n    $profile->set(''email'', $_POST[''email'']);\n    $user->addOne($profile);\n    $profile->save();\n    $user->save();\n    \n    $result[''result''] = ''success'';\n\n    return json_encode($result);\n}', 0, 'a:0:{}', '', 0, ''),
+(3, 1, 0, 'deleteUser', '', 0, 0, 0, '$method = $_SERVER[''REQUEST_METHOD''];\nif($method == ''DELETE''){\n    $alias = $modx->context->getOption(''request_param_alias'', ''q'');\n    if (!isset($_REQUEST[$alias])) {return false;}\n    $request = $_REQUEST[$alias];\n    $resourceAlias = explode(''/'', $request);\n    \n    $user = $modx->getObject(''modUser'', $resourceAlias[1]);\n    $user->remove();\n    $result[''result''] = ''success'';\n    return json_encode($result);\n}', 0, 'a:0:{}', '', 0, ''),
+(4, 1, 0, 'getUser', '', 0, 0, 0, '$method = $_SERVER[''REQUEST_METHOD''];\nif($method == ''GET''){\n    $alias = $modx->context->getOption(''request_param_alias'', ''q'');\n    if (!isset($_REQUEST[$alias])) {return false;}\n    $request = $_REQUEST[$alias];\n    $resourceAlias = explode(''/'', $request);\n    \n    $user = $modx->getObject(''modUser'', $resourceAlias[1]);\n\n    $result[''result''] = ''success'';\n    $result[''users''][''name''] = $user->get(''username'');\n    $result[''users''][''id''] = $user->get(''id'');\n    \n    return json_encode($result);\n}', 0, 'a:0:{}', '', 0, ''),
+(5, 1, 0, 'editUser', '', 0, 0, 0, '$method = $_SERVER[''REQUEST_METHOD''];\nif($method == "PUT"){\n    $alias = $modx->context->getOption(''request_param_alias'', ''q'');\n    if (!isset($_REQUEST[$alias])) {return false;}\n    $request = $_REQUEST[$alias];\n    $resourceAlias = explode(''/'', $request);\n    $putdata = file_get_contents(''php://input''); \n    $exploded = explode('';'', $putdata);  \n    foreach($exploded as $pair) { \n        $item = explode(''------'', $pair); \n        $var = explode(''"'', $item[0]);\n        $_PUT[$var[1]] = trim($var[2]);\n    }\n  \n    $user = $modx->getObject(''modUser'', $resourceAlias[1]);\n    $user->set(''username'', $_PUT[''username'']);\n   // $user->set(''password'', $_PUT[''username'']);\n    $user->save();\n    $profile = $user->getOne(''Profile'');\n    $profile->set(''fullname'', $_PUT[''fullname'']);\n    $profile->set(''email'', $_PUT[''email'']);\n    $profile->save();\n    $result[''result''] = ''success'';\n    return json_encode($result);\n}', 0, 'a:0:{}', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -2061,20 +2373,20 @@ INSERT INTO `parentykt_system_settings` (`key`, `value`, `xtype`, `namespace`, `
 ('forward_merge_excludes', 'type,published,class_key', 'textfield', 'core', 'system', NULL),
 ('friendly_alias_lowercase_only', '1', 'combo-boolean', 'core', 'furls', NULL),
 ('friendly_alias_max_length', '0', 'textfield', 'core', 'furls', NULL),
-('friendly_alias_realtime', '0', 'combo-boolean', 'core', 'furls', NULL),
+('friendly_alias_realtime', '1', 'combo-boolean', 'core', 'furls', '2016-10-13 15:28:46'),
 ('friendly_alias_restrict_chars', 'pattern', 'textfield', 'core', 'furls', NULL),
 ('friendly_alias_restrict_chars_pattern', '/[\\0\\x0B\\t\\n\\r\\f\\a&=+%#<>"~:`@\\?\\[\\]\\{\\}\\|\\^''\\\\]/', 'textfield', 'core', 'furls', NULL),
 ('friendly_alias_strip_element_tags', '1', 'combo-boolean', 'core', 'furls', NULL),
-('friendly_alias_translit', 'none', 'textfield', 'core', 'furls', NULL),
-('friendly_alias_translit_class', 'translit.modTransliterate', 'textfield', 'core', 'furls', NULL),
-('friendly_alias_translit_class_path', '{core_path}components/', 'textfield', 'core', 'furls', NULL),
+('friendly_alias_translit', 'russian', 'textfield', 'core', 'furls', '2016-10-13 15:29:13'),
+('friendly_alias_translit_class', 'modx.translit.modTransliterate', 'textfield', 'core', 'furls', '2016-10-13 15:28:05'),
+('friendly_alias_translit_class_path', '{core_path}components/translit/model/', 'textfield', 'core', 'furls', '2016-10-13 15:28:05'),
 ('friendly_alias_trim_chars', '/.-_', 'textfield', 'core', 'furls', NULL),
 ('friendly_alias_word_delimiter', '-', 'textfield', 'core', 'furls', NULL),
 ('friendly_alias_word_delimiters', '-_', 'textfield', 'core', 'furls', NULL),
-('friendly_urls', '0', 'combo-boolean', 'core', 'furls', NULL),
+('friendly_urls', '1', 'combo-boolean', 'core', 'furls', '2016-10-13 15:28:37'),
 ('friendly_urls_strict', '0', 'combo-boolean', 'core', 'furls', NULL),
 ('use_frozen_parent_uris', '0', 'combo-boolean', 'core', 'furls', NULL),
-('global_duplicate_uri_check', '0', 'combo-boolean', 'core', 'furls', NULL),
+('global_duplicate_uri_check', '1', 'combo-boolean', 'core', 'furls', '2016-10-13 15:28:35'),
 ('hidemenu_default', '0', 'combo-boolean', 'core', 'site', NULL),
 ('inline_help', '1', 'combo-boolean', 'core', 'manager', NULL),
 ('locale', '', 'textfield', 'core', 'language', NULL),
@@ -2191,7 +2503,7 @@ INSERT INTO `parentykt_system_settings` (`key`, `value`, `xtype`, `namespace`, `
 ('upload_images', 'jpg,jpeg,png,gif,psd,ico,bmp,tiff,svg,svgz', 'textfield', 'core', 'file', NULL),
 ('upload_maxsize', '67108864', 'textfield', 'core', 'file', '2016-10-12 21:26:24'),
 ('upload_media', 'mp3,wav,au,wmv,avi,mpg,mpeg', 'textfield', 'core', 'file', NULL),
-('use_alias_path', '0', 'combo-boolean', 'core', 'furls', NULL),
+('use_alias_path', '1', 'combo-boolean', 'core', 'furls', '2016-10-13 15:28:31'),
 ('use_browser', '1', 'combo-boolean', 'core', 'file', NULL),
 ('use_editor', '1', 'combo-boolean', 'core', 'editor', NULL),
 ('use_multibyte', '1', 'combo-boolean', 'core', 'language', '2016-10-12 21:26:24'),
@@ -2203,7 +2515,7 @@ INSERT INTO `parentykt_system_settings` (`key`, `value`, `xtype`, `namespace`, `
 ('welcome_action', 'welcome', 'textfield', 'core', 'manager', NULL),
 ('welcome_namespace', 'core', 'textfield', 'core', 'manager', NULL),
 ('which_editor', '', 'modx-combo-rte', 'core', 'editor', NULL),
-('which_element_editor', '', 'modx-combo-rte', 'core', 'editor', NULL),
+('which_element_editor', 'Ace', 'modx-combo-rte', 'core', 'editor', '2016-10-13 15:38:31'),
 ('xhtml_urls', '1', 'combo-boolean', 'core', 'site', NULL),
 ('enable_gravatar', '1', 'combo-boolean', 'core', 'manager', NULL),
 ('mgr_tree_icon_context', 'tree-context', 'textfield', 'core', 'manager', NULL),
@@ -2215,7 +2527,16 @@ INSERT INTO `parentykt_system_settings` (`key`, `value`, `xtype`, `namespace`, `
 ('parser_recurse_uncacheable', '1', 'combo-boolean', 'core', 'system', NULL),
 ('preserve_menuindex', '1', 'combo-boolean', 'core', 'manager', NULL),
 ('settings_version', '2.5.1-pl', 'textfield', 'core', 'system', NULL),
-('settings_distro', 'traditional', 'textfield', 'core', 'system', NULL);
+('settings_distro', 'traditional', 'textfield', 'core', 'system', NULL),
+('ace.theme', 'twilight', 'textfield', 'ace', 'general', '2016-10-13 15:39:07'),
+('ace.font_size', '13px', 'textfield', 'ace', 'general', NULL),
+('ace.word_wrap', '1', 'combo-boolean', 'ace', 'general', '2016-10-13 15:39:14'),
+('ace.soft_tabs', '1', 'combo-boolean', 'ace', 'general', NULL),
+('ace.tab_size', '4', 'textfield', 'ace', 'general', NULL),
+('ace.fold_widgets', '1', 'combo-boolean', 'ace', 'general', NULL),
+('ace.show_invisibles', '0', 'combo-boolean', 'ace', 'general', NULL),
+('ace.snippets', '', 'textarea', 'ace', 'general', NULL),
+('ace.height', '', 'textfield', 'ace', 'general', NULL);
 
 -- --------------------------------------------------------
 
@@ -2253,6 +2574,14 @@ CREATE TABLE IF NOT EXISTS `parentykt_transport_packages` (
   KEY `release` (`release`),
   KEY `release_index` (`release_index`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `parentykt_transport_packages`
+--
+
+INSERT INTO `parentykt_transport_packages` (`signature`, `created`, `updated`, `installed`, `state`, `workspace`, `provider`, `disabled`, `source`, `manifest`, `attributes`, `package_name`, `metadata`, `version_major`, `version_minor`, `version_patch`, `release`, `release_index`) VALUES
+('translit-1.0.0-beta', '2016-10-13 17:28:00', '2016-10-13 15:28:06', '2016-10-13 17:28:05', 0, 1, 0, 0, 'translit-1.0.0-beta.transport.zip', NULL, 'a:2:{s:7:"license";s:15218:"GNU GENERAL PUBLIC LICENSE\n   Version 2, June 1991\n--------------------------\n\nCopyright (C) 1989, 1991 Free Software Foundation, Inc.\n59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\n\nEveryone is permitted to copy and distribute verbatim copies\nof this license document, but changing it is not allowed.\n\nPreamble\n--------\n\n  The licenses for most software are designed to take away your\nfreedom to share and change it.  By contrast, the GNU General Public\nLicense is intended to guarantee your freedom to share and change free\nsoftware--to make sure the software is free for all its users.  This\nGeneral Public License applies to most of the Free Software\nFoundation''s software and to any other program whose authors commit to\nusing it.  (Some other Free Software Foundation software is covered by\nthe GNU Library General Public License instead.)  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthis service if you wish), that you receive source code or can get it\nif you want it, that you can change the software or use pieces of it\nin new free programs; and that you know you can do these things.\n\n  To protect your rights, we need to make restrictions that forbid\nanyone to deny you these rights or to ask you to surrender the rights.\nThese restrictions translate to certain responsibilities for you if you\ndistribute copies of the software, or if you modify it.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must give the recipients all the rights that\nyou have.  You must make sure that they, too, receive or can get the\nsource code.  And you must show them these terms so they know their\nrights.\n\n  We protect your rights with two steps: (1) copyright the software, and\n(2) offer you this license which gives you legal permission to copy,\ndistribute and/or modify the software.\n\n  Also, for each author''s protection and ours, we want to make certain\nthat everyone understands that there is no warranty for this free\nsoftware.  If the software is modified by someone else and passed on, we\nwant its recipients to know that what they have is not the original, so\nthat any problems introduced by others will not reflect on the original\nauthors'' reputations.\n\n  Finally, any free program is threatened constantly by software\npatents.  We wish to avoid the danger that redistributors of a free\nprogram will individually obtain patent licenses, in effect making the\nprogram proprietary.  To prevent this, we have made it clear that any\npatent must be licensed for everyone''s free use or not licensed at all.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n\nGNU GENERAL PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n---------------------------------------------------------------\n\n  0. This License applies to any program or other work which contains\na notice placed by the copyright holder saying it may be distributed\nunder the terms of this General Public License.  The "Program", below,\nrefers to any such program or work, and a "work based on the Program"\nmeans either the Program or any derivative work under copyright law:\nthat is to say, a work containing the Program or a portion of it,\neither verbatim or with modifications and/or translated into another\nlanguage.  (Hereinafter, translation is included without limitation in\nthe term "modification".)  Each licensee is addressed as "you".\n\nActivities other than copying, distribution and modification are not\ncovered by this License; they are outside its scope.  The act of\nrunning the Program is not restricted, and the output from the Program\nis covered only if its contents constitute a work based on the\nProgram (independent of having been made by running the Program).\nWhether that is true depends on what the Program does.\n\n  1. You may copy and distribute verbatim copies of the Program''s\nsource code as you receive it, in any medium, provided that you\nconspicuously and appropriately publish on each copy an appropriate\ncopyright notice and disclaimer of warranty; keep intact all the\nnotices that refer to this License and to the absence of any warranty;\nand give any other recipients of the Program a copy of this License\nalong with the Program.\n\nYou may charge a fee for the physical act of transferring a copy, and\nyou may at your option offer warranty protection in exchange for a fee.\n\n  2. You may modify your copy or copies of the Program or any portion\nof it, thus forming a work based on the Program, and copy and\ndistribute such modifications or work under the terms of Section 1\nabove, provided that you also meet all of these conditions:\n\n    a) You must cause the modified files to carry prominent notices\n    stating that you changed the files and the date of any change.\n\n    b) You must cause any work that you distribute or publish, that in\n    whole or in part contains or is derived from the Program or any\n    part thereof, to be licensed as a whole at no charge to all third\n    parties under the terms of this License.\n\n    c) If the modified program normally reads commands interactively\n    when run, you must cause it, when started running for such\n    interactive use in the most ordinary way, to print or display an\n    announcement including an appropriate copyright notice and a\n    notice that there is no warranty (or else, saying that you provide\n    a warranty) and that users may redistribute the program under\n    these conditions, and telling the user how to view a copy of this\n    License.  (Exception: if the Program itself is interactive but\n    does not normally print such an announcement, your work based on\n    the Program is not required to print an announcement.)\n\nThese requirements apply to the modified work as a whole.  If\nidentifiable sections of that work are not derived from the Program,\nand can be reasonably considered independent and separate works in\nthemselves, then this License, and its terms, do not apply to those\nsections when you distribute them as separate works.  But when you\ndistribute the same sections as part of a whole which is a work based\non the Program, the distribution of the whole must be on the terms of\nthis License, whose permissions for other licensees extend to the\nentire whole, and thus to each and every part regardless of who wrote it.\n\nThus, it is not the intent of this section to claim rights or contest\nyour rights to work written entirely by you; rather, the intent is to\nexercise the right to control the distribution of derivative or\ncollective works based on the Program.\n\nIn addition, mere aggregation of another work not based on the Program\nwith the Program (or with a work based on the Program) on a volume of\na storage or distribution medium does not bring the other work under\nthe scope of this License.\n\n  3. You may copy and distribute the Program (or a work based on it,\nunder Section 2) in object code or executable form under the terms of\nSections 1 and 2 above provided that you also do one of the following:\n\n    a) Accompany it with the complete corresponding machine-readable\n    source code, which must be distributed under the terms of Sections\n    1 and 2 above on a medium customarily used for software interchange; or,\n\n    b) Accompany it with a written offer, valid for at least three\n    years, to give any third party, for a charge no more than your\n    cost of physically performing source distribution, a complete\n    machine-readable copy of the corresponding source code, to be\n    distributed under the terms of Sections 1 and 2 above on a medium\n    customarily used for software interchange; or,\n\n    c) Accompany it with the information you received as to the offer\n    to distribute corresponding source code.  (This alternative is\n    allowed only for noncommercial distribution and only if you\n    received the program in object code or executable form with such\n    an offer, in accord with Subsection b above.)\n\nThe source code for a work means the preferred form of the work for\nmaking modifications to it.  For an executable work, complete source\ncode means all the source code for all modules it contains, plus any\nassociated interface definition files, plus the scripts used to\ncontrol compilation and installation of the executable.  However, as a\nspecial exception, the source code distributed need not include\nanything that is normally distributed (in either source or binary\nform) with the major components (compiler, kernel, and so on) of the\noperating system on which the executable runs, unless that component\nitself accompanies the executable.\n\nIf distribution of executable or object code is made by offering\naccess to copy from a designated place, then offering equivalent\naccess to copy the source code from the same place counts as\ndistribution of the source code, even though third parties are not\ncompelled to copy the source along with the object code.\n\n  4. You may not copy, modify, sublicense, or distribute the Program\nexcept as expressly provided under this License.  Any attempt\notherwise to copy, modify, sublicense or distribute the Program is\nvoid, and will automatically terminate your rights under this License.\nHowever, parties who have received copies, or rights, from you under\nthis License will not have their licenses terminated so long as such\nparties remain in full compliance.\n\n  5. You are not required to accept this License, since you have not\nsigned it.  However, nothing else grants you permission to modify or\ndistribute the Program or its derivative works.  These actions are\nprohibited by law if you do not accept this License.  Therefore, by\nmodifying or distributing the Program (or any work based on the\nProgram), you indicate your acceptance of this License to do so, and\nall its terms and conditions for copying, distributing or modifying\nthe Program or works based on it.\n\n  6. Each time you redistribute the Program (or any work based on the\nProgram), the recipient automatically receives a license from the\noriginal licensor to copy, distribute or modify the Program subject to\nthese terms and conditions.  You may not impose any further\nrestrictions on the recipients'' exercise of the rights granted herein.\nYou are not responsible for enforcing compliance by third parties to\nthis License.\n\n  7. If, as a consequence of a court judgment or allegation of patent\ninfringement or for any other reason (not limited to patent issues),\nconditions are imposed on you (whether by court order, agreement or\notherwise) that contradict the conditions of this License, they do not\nexcuse you from the conditions of this License.  If you cannot\ndistribute so as to satisfy simultaneously your obligations under this\nLicense and any other pertinent obligations, then as a consequence you\nmay not distribute the Program at all.  For example, if a patent\nlicense would not permit royalty-free redistribution of the Program by\nall those who receive copies directly or indirectly through you, then\nthe only way you could satisfy both it and this License would be to\nrefrain entirely from distribution of the Program.\n\nIf any portion of this section is held invalid or unenforceable under\nany particular circumstance, the balance of the section is intended to\napply and the section as a whole is intended to apply in other\ncircumstances.\n\nIt is not the purpose of this section to induce you to infringe any\npatents or other property right claims or to contest validity of any\nsuch claims; this section has the sole purpose of protecting the\nintegrity of the free software distribution system, which is\nimplemented by public license practices.  Many people have made\ngenerous contributions to the wide range of software distributed\nthrough that system in reliance on consistent application of that\nsystem; it is up to the author/donor to decide if he or she is willing\nto distribute software through any other system and a licensee cannot\nimpose that choice.\n\nThis section is intended to make thoroughly clear what is believed to\nbe a consequence of the rest of this License.\n\n  8. If the distribution and/or use of the Program is restricted in\ncertain countries either by patents or by copyrighted interfaces, the\noriginal copyright holder who places the Program under this License\nmay add an explicit geographical distribution limitation excluding\nthose countries, so that distribution is permitted only in or among\ncountries not thus excluded.  In such case, this License incorporates\nthe limitation as if written in the body of this License.\n\n  9. The Free Software Foundation may publish revised and/or new versions\nof the General Public License from time to time.  Such new versions will\nbe similar in spirit to the present version, but may differ in detail to\naddress new problems or concerns.\n\nEach version is given a distinguishing version number.  If the Program\nspecifies a version number of this License which applies to it and "any\nlater version", you have the option of following the terms and conditions\neither of that version or of any later version published by the Free\nSoftware Foundation.  If the Program does not specify a version number of\nthis License, you may choose any version ever published by the Free Software\nFoundation.\n\n  10. If you wish to incorporate parts of the Program into other free\nprograms whose distribution conditions are different, write to the author\nto ask for permission.  For software which is copyrighted by the Free\nSoftware Foundation, write to the Free Software Foundation; we sometimes\nmake exceptions for this.  Our decision will be guided by the two goals\nof preserving the free status of all derivatives of our free software and\nof promoting the sharing and reuse of software generally.\n\nNO WARRANTY\n-----------\n\n  11. BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY\nFOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN\nOTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES\nPROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED\nOR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS\nTO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE\nPROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,\nREPAIR OR CORRECTION.\n\n  12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING\nWILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR\nREDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,\nINCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING\nOUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED\nTO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY\nYOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER\nPROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE\nPOSSIBILITY OF SUCH DAMAGES.\n\n---------------------------\nEND OF TERMS AND CONDITIONS";s:6:"readme";s:453:"--------------------\nExtension: translit\n--------------------\nVersion: 1.0.0-beta\nReleased: October 20, 2010\nSince: October 20, 2010\nAuthor: Jason Coward <jason@modx.com>\n\nA MODx Revolution Core Extension, the translit package provides a custom transliteration service class. When installed,\nthis is automatically available for the core Friendly URL alias transliteration process for Resources. You can also use\nthe service in your plugins and snippets.";}', 'translit', NULL, 1, 0, 0, 'beta', 0),
+('ace-1.6.5-pl', '2016-10-13 17:38:25', '2016-10-13 15:38:33', '2016-10-13 17:38:31', 0, 1, 0, 0, 'ace-1.6.5-pl.transport.zip', NULL, 'a:3:{s:7:"license";s:15218:"GNU GENERAL PUBLIC LICENSE\n   Version 2, June 1991\n--------------------------\n\nCopyright (C) 1989, 1991 Free Software Foundation, Inc.\n59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\n\nEveryone is permitted to copy and distribute verbatim copies\nof this license document, but changing it is not allowed.\n\nPreamble\n--------\n\n  The licenses for most software are designed to take away your\nfreedom to share and change it.  By contrast, the GNU General Public\nLicense is intended to guarantee your freedom to share and change free\nsoftware--to make sure the software is free for all its users.  This\nGeneral Public License applies to most of the Free Software\nFoundation''s software and to any other program whose authors commit to\nusing it.  (Some other Free Software Foundation software is covered by\nthe GNU Library General Public License instead.)  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthis service if you wish), that you receive source code or can get it\nif you want it, that you can change the software or use pieces of it\nin new free programs; and that you know you can do these things.\n\n  To protect your rights, we need to make restrictions that forbid\nanyone to deny you these rights or to ask you to surrender the rights.\nThese restrictions translate to certain responsibilities for you if you\ndistribute copies of the software, or if you modify it.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must give the recipients all the rights that\nyou have.  You must make sure that they, too, receive or can get the\nsource code.  And you must show them these terms so they know their\nrights.\n\n  We protect your rights with two steps: (1) copyright the software, and\n(2) offer you this license which gives you legal permission to copy,\ndistribute and/or modify the software.\n\n  Also, for each author''s protection and ours, we want to make certain\nthat everyone understands that there is no warranty for this free\nsoftware.  If the software is modified by someone else and passed on, we\nwant its recipients to know that what they have is not the original, so\nthat any problems introduced by others will not reflect on the original\nauthors'' reputations.\n\n  Finally, any free program is threatened constantly by software\npatents.  We wish to avoid the danger that redistributors of a free\nprogram will individually obtain patent licenses, in effect making the\nprogram proprietary.  To prevent this, we have made it clear that any\npatent must be licensed for everyone''s free use or not licensed at all.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n\nGNU GENERAL PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n---------------------------------------------------------------\n\n  0. This License applies to any program or other work which contains\na notice placed by the copyright holder saying it may be distributed\nunder the terms of this General Public License.  The "Program", below,\nrefers to any such program or work, and a "work based on the Program"\nmeans either the Program or any derivative work under copyright law:\nthat is to say, a work containing the Program or a portion of it,\neither verbatim or with modifications and/or translated into another\nlanguage.  (Hereinafter, translation is included without limitation in\nthe term "modification".)  Each licensee is addressed as "you".\n\nActivities other than copying, distribution and modification are not\ncovered by this License; they are outside its scope.  The act of\nrunning the Program is not restricted, and the output from the Program\nis covered only if its contents constitute a work based on the\nProgram (independent of having been made by running the Program).\nWhether that is true depends on what the Program does.\n\n  1. You may copy and distribute verbatim copies of the Program''s\nsource code as you receive it, in any medium, provided that you\nconspicuously and appropriately publish on each copy an appropriate\ncopyright notice and disclaimer of warranty; keep intact all the\nnotices that refer to this License and to the absence of any warranty;\nand give any other recipients of the Program a copy of this License\nalong with the Program.\n\nYou may charge a fee for the physical act of transferring a copy, and\nyou may at your option offer warranty protection in exchange for a fee.\n\n  2. You may modify your copy or copies of the Program or any portion\nof it, thus forming a work based on the Program, and copy and\ndistribute such modifications or work under the terms of Section 1\nabove, provided that you also meet all of these conditions:\n\n    a) You must cause the modified files to carry prominent notices\n    stating that you changed the files and the date of any change.\n\n    b) You must cause any work that you distribute or publish, that in\n    whole or in part contains or is derived from the Program or any\n    part thereof, to be licensed as a whole at no charge to all third\n    parties under the terms of this License.\n\n    c) If the modified program normally reads commands interactively\n    when run, you must cause it, when started running for such\n    interactive use in the most ordinary way, to print or display an\n    announcement including an appropriate copyright notice and a\n    notice that there is no warranty (or else, saying that you provide\n    a warranty) and that users may redistribute the program under\n    these conditions, and telling the user how to view a copy of this\n    License.  (Exception: if the Program itself is interactive but\n    does not normally print such an announcement, your work based on\n    the Program is not required to print an announcement.)\n\nThese requirements apply to the modified work as a whole.  If\nidentifiable sections of that work are not derived from the Program,\nand can be reasonably considered independent and separate works in\nthemselves, then this License, and its terms, do not apply to those\nsections when you distribute them as separate works.  But when you\ndistribute the same sections as part of a whole which is a work based\non the Program, the distribution of the whole must be on the terms of\nthis License, whose permissions for other licensees extend to the\nentire whole, and thus to each and every part regardless of who wrote it.\n\nThus, it is not the intent of this section to claim rights or contest\nyour rights to work written entirely by you; rather, the intent is to\nexercise the right to control the distribution of derivative or\ncollective works based on the Program.\n\nIn addition, mere aggregation of another work not based on the Program\nwith the Program (or with a work based on the Program) on a volume of\na storage or distribution medium does not bring the other work under\nthe scope of this License.\n\n  3. You may copy and distribute the Program (or a work based on it,\nunder Section 2) in object code or executable form under the terms of\nSections 1 and 2 above provided that you also do one of the following:\n\n    a) Accompany it with the complete corresponding machine-readable\n    source code, which must be distributed under the terms of Sections\n    1 and 2 above on a medium customarily used for software interchange; or,\n\n    b) Accompany it with a written offer, valid for at least three\n    years, to give any third party, for a charge no more than your\n    cost of physically performing source distribution, a complete\n    machine-readable copy of the corresponding source code, to be\n    distributed under the terms of Sections 1 and 2 above on a medium\n    customarily used for software interchange; or,\n\n    c) Accompany it with the information you received as to the offer\n    to distribute corresponding source code.  (This alternative is\n    allowed only for noncommercial distribution and only if you\n    received the program in object code or executable form with such\n    an offer, in accord with Subsection b above.)\n\nThe source code for a work means the preferred form of the work for\nmaking modifications to it.  For an executable work, complete source\ncode means all the source code for all modules it contains, plus any\nassociated interface definition files, plus the scripts used to\ncontrol compilation and installation of the executable.  However, as a\nspecial exception, the source code distributed need not include\nanything that is normally distributed (in either source or binary\nform) with the major components (compiler, kernel, and so on) of the\noperating system on which the executable runs, unless that component\nitself accompanies the executable.\n\nIf distribution of executable or object code is made by offering\naccess to copy from a designated place, then offering equivalent\naccess to copy the source code from the same place counts as\ndistribution of the source code, even though third parties are not\ncompelled to copy the source along with the object code.\n\n  4. You may not copy, modify, sublicense, or distribute the Program\nexcept as expressly provided under this License.  Any attempt\notherwise to copy, modify, sublicense or distribute the Program is\nvoid, and will automatically terminate your rights under this License.\nHowever, parties who have received copies, or rights, from you under\nthis License will not have their licenses terminated so long as such\nparties remain in full compliance.\n\n  5. You are not required to accept this License, since you have not\nsigned it.  However, nothing else grants you permission to modify or\ndistribute the Program or its derivative works.  These actions are\nprohibited by law if you do not accept this License.  Therefore, by\nmodifying or distributing the Program (or any work based on the\nProgram), you indicate your acceptance of this License to do so, and\nall its terms and conditions for copying, distributing or modifying\nthe Program or works based on it.\n\n  6. Each time you redistribute the Program (or any work based on the\nProgram), the recipient automatically receives a license from the\noriginal licensor to copy, distribute or modify the Program subject to\nthese terms and conditions.  You may not impose any further\nrestrictions on the recipients'' exercise of the rights granted herein.\nYou are not responsible for enforcing compliance by third parties to\nthis License.\n\n  7. If, as a consequence of a court judgment or allegation of patent\ninfringement or for any other reason (not limited to patent issues),\nconditions are imposed on you (whether by court order, agreement or\notherwise) that contradict the conditions of this License, they do not\nexcuse you from the conditions of this License.  If you cannot\ndistribute so as to satisfy simultaneously your obligations under this\nLicense and any other pertinent obligations, then as a consequence you\nmay not distribute the Program at all.  For example, if a patent\nlicense would not permit royalty-free redistribution of the Program by\nall those who receive copies directly or indirectly through you, then\nthe only way you could satisfy both it and this License would be to\nrefrain entirely from distribution of the Program.\n\nIf any portion of this section is held invalid or unenforceable under\nany particular circumstance, the balance of the section is intended to\napply and the section as a whole is intended to apply in other\ncircumstances.\n\nIt is not the purpose of this section to induce you to infringe any\npatents or other property right claims or to contest validity of any\nsuch claims; this section has the sole purpose of protecting the\nintegrity of the free software distribution system, which is\nimplemented by public license practices.  Many people have made\ngenerous contributions to the wide range of software distributed\nthrough that system in reliance on consistent application of that\nsystem; it is up to the author/donor to decide if he or she is willing\nto distribute software through any other system and a licensee cannot\nimpose that choice.\n\nThis section is intended to make thoroughly clear what is believed to\nbe a consequence of the rest of this License.\n\n  8. If the distribution and/or use of the Program is restricted in\ncertain countries either by patents or by copyrighted interfaces, the\noriginal copyright holder who places the Program under this License\nmay add an explicit geographical distribution limitation excluding\nthose countries, so that distribution is permitted only in or among\ncountries not thus excluded.  In such case, this License incorporates\nthe limitation as if written in the body of this License.\n\n  9. The Free Software Foundation may publish revised and/or new versions\nof the General Public License from time to time.  Such new versions will\nbe similar in spirit to the present version, but may differ in detail to\naddress new problems or concerns.\n\nEach version is given a distinguishing version number.  If the Program\nspecifies a version number of this License which applies to it and "any\nlater version", you have the option of following the terms and conditions\neither of that version or of any later version published by the Free\nSoftware Foundation.  If the Program does not specify a version number of\nthis License, you may choose any version ever published by the Free Software\nFoundation.\n\n  10. If you wish to incorporate parts of the Program into other free\nprograms whose distribution conditions are different, write to the author\nto ask for permission.  For software which is copyrighted by the Free\nSoftware Foundation, write to the Free Software Foundation; we sometimes\nmake exceptions for this.  Our decision will be guided by the two goals\nof preserving the free status of all derivatives of our free software and\nof promoting the sharing and reuse of software generally.\n\nNO WARRANTY\n-----------\n\n  11. BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY\nFOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN\nOTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES\nPROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED\nOR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS\nTO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE\nPROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,\nREPAIR OR CORRECTION.\n\n  12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING\nWILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR\nREDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,\nINCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING\nOUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED\nTO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY\nYOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER\nPROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE\nPOSSIBILITY OF SUCH DAMAGES.\n\n---------------------------\nEND OF TERMS AND CONDITIONS";s:6:"readme";s:271:"--------------------\nExtra: Ace\n--------------------\nSince: March 29th, 2012\nAuthor: Danil Kostin <danya.postfactum@gmail.com>\nLicense: GNU GPLv2 (or later at your option)\n\nIntegrates Ace Code Editor into MODx Revolution.\n\nPress Ctrl+Alt+H to see all available shortcuts.";s:9:"changelog";s:3767:"Changelog for Ace integration into MODx Revolution.\n\nAce 1.6.5\n====================================\n- Added: "Twig" syntax for support of Twig in chunks.\n- Changed: Plugin is not static anymore.\n\nAce 1.6.4\n====================================\n- Fixed: Support of emmet in smarty mode. Again.\n\nAce 1.6.3\n====================================\n- Fixed: Support of emmet in smarty mode.\n\nAce 1.6.2\n====================================\n- Fixed: Editor mode handling.\n- Added: "Markdown" syntax for mime type "text/x-markdown".\n\nAce 1.6.1\n====================================\n- Fixed : Work with enabled system setting "compress_js".\n\nAce 1.6.0\n====================================\n- Added: "Smarty" syntax for support of Fenom in chunks.\n- Updated: Ace to version 1.2.0.\n\nAce 1.5.1\n====================================\n- Fixed: Bug with narrowing of the textarea.\n\nAce 1.5.0\n====================================\n- Changed: Assets are moved back to /assets/\n- Fixed: MODx tag completions (was completely broken)\n- Added: Editor height setting\n\nAce 1.4.3\n====================================\n- Added: MODx tag completions (Ctrl+Space)\n- Fixed: Issue caused AjaxManager (MODx Manager speed booster plugin) tree drag''n''drop bug\n\nAce 1.4.2\n====================================\n- Added: Undo coalescing\n- Changed: Mac fullscreen command is bound to Command+F12\n- Added: Drag delay (allow to start new selection inside current one) for Mac\n- Fixed: Use file extension of static chunks to detect code syntax\n\n\nAce 1.4.1\n====================================\n- Fixed: Tab handling\n- Fixed: Emmet shortcut listing by Ctr+Alt+H\n- Added: Expandable snippets support (see ace.snippets setting)\n- Added: Emmet wrap_with_abbreviation command (Alt+W)\n\nAce 1.4.0\n====================================\n- Added: Emmet (aka Zen Coding) support\n- Added: Terminal dark theme\n- Added: Hotkey table (Ctrl+Alt+H)\n- Fixed: Resource overview fatal error\n- Changed: Assets are moved to /manager/assets/components/\n\nAce 1.3.3\n====================================\n- Added: PHP live syntax check\n- Added: Chaos dark theme\n- Added: Setting show_invisibles\n\n\nAce 1.3.2\n====================================\n- Fixed: The bug while installing the Ace\n- Fixed: Broken word_wrap setting\n- Added: Tab settings (tab size, soft tab)\n- Added: Now completele compatible with AjaxManager extra\n\n\nAce 1.3.1\n====================================\n- Changed: Plugin content now is stored in static file\n\n\nAce 1.3.0\n====================================\n- Added: German translation\n- Added: MODx tags highlighting\n- Added: Ambiance and xcode themes\n- Added: less/scss syntax highlighting\n- Added: Fullwindow mode (Ctrl + F11)\n- Changed: Editor now ignores `wich_editor` setting. Set `use_editor` to false to use ACE for Resources.\n\n\nAce 1.2.1\n====================================\n- Changed: Assets are moved to manager folder\n- Added: Font size setting\n- Added: "GitHub" theme\n- Added: Support of html5 drag''n''drop (accepting of dropped text)\n- Added: XML / HTML tag autoclosing\n- Fixed: broken en lexicon and php 5.3 incompatibility\n\n\nAce 1.2.0\n====================================\n- Removed: Some unnecessary options\n- Changed: Editor options are moved to system settings\n- Fixed: Multiple little editor bugs\n- Added: Add missing "OnFileEditFormPrerender" event to MODx\n- Added: Multiline editing\n- Added: Advanced find/replace window\n\n\nAce 1.1.0\n====================================\n- Fixed: Fatal error on document create event\n- Fixed: Changing of properties has no effect\n- Added: File edition support\n- Added: MODx tree elements drag''n''drop support\n- Added: Auto-assigning which_element_editor to Ace\n\n\nAce 1.0.0\n====================================\n- Added: Plugin properties to adjust how Ace behaves\n- Initial commit";}', 'ace', NULL, 1, 6, 5, 'pl', 0);
 
 -- --------------------------------------------------------
 
@@ -2313,14 +2642,16 @@ CREATE TABLE IF NOT EXISTS `parentykt_users` (
   KEY `class_key` (`class_key`),
   KEY `remote_key` (`remote_key`),
   KEY `primary_group` (`primary_group`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `parentykt_users`
 --
 
 INSERT INTO `parentykt_users` (`id`, `username`, `password`, `cachepwd`, `class_key`, `active`, `remote_key`, `remote_data`, `hash_class`, `salt`, `primary_group`, `session_stale`, `sudo`, `createdon`) VALUES
-(1, 'admin', '+9rLdeFv8FtVOKcEuUrk8RPsNVZpIc3E8ZVPEFA+2PI=', '', 'modUser', 1, NULL, NULL, 'hashing.modPBKDF2', '20ed5a92977c587616d748a63976bd11', 1, NULL, 1, 1476307584);
+(1, 'admin', '+9rLdeFv8FtVOKcEuUrk8RPsNVZpIc3E8ZVPEFA+2PI=', '', 'modUser', 1, NULL, NULL, 'hashing.modPBKDF2', '20ed5a92977c587616d748a63976bd11', 1, 'a:2:{i:0;s:3:"mgr";i:1;s:3:"web";}', 1, 1476307584),
+(9, 'выпвывап', 'SljHqlwDX+zVTAg1nkZWw8eR8EFKwRb2LSLWtXVrm7Q=', '', 'modUser', 1, NULL, NULL, 'hashing.modPBKDF2', '999434476a9b8f4b383f3d15384d9f64', 0, NULL, 0, 1476521401),
+(5, 'user33', 'Q0qkJcSJ38FQCgY4of3/GxuFfHZp3q2pdc4kvVgvtXc=', '', 'modUser', 1, NULL, NULL, 'hashing.modPBKDF2', '84e7aad62f8cc3932cb76f27ff7bc0b1', 0, NULL, 0, 1476512656);
 
 -- --------------------------------------------------------
 
@@ -2357,14 +2688,16 @@ CREATE TABLE IF NOT EXISTS `parentykt_user_attributes` (
   `extended` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `internalKey` (`internalKey`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `parentykt_user_attributes`
 --
 
 INSERT INTO `parentykt_user_attributes` (`id`, `internalKey`, `fullname`, `email`, `phone`, `mobilephone`, `blocked`, `blockeduntil`, `blockedafter`, `logincount`, `lastlogin`, `thislogin`, `failedlogincount`, `sessionid`, `dob`, `gender`, `address`, `country`, `city`, `state`, `zip`, `fax`, `photo`, `comment`, `website`, `extended`) VALUES
-(1, 1, 'Администратор по умолчанию', 'lopatim@gmail.com', '', '', 0, 0, 0, 1, 0, 1476307598, 0, 'qg3ivjd39cifp0m8q55440m8r1', 0, 0, '', '', '', '', '', '', '', '', '', NULL);
+(1, 1, 'Администратор по умолчанию', 'lopatim@gmail.com', '', '', 0, 0, 0, 3, 1476371221, 1476510042, 0, 'aacvp1c62kfn62frdan2db0072', 0, 0, '', '', '', '', '', '', '', '', '', NULL),
+(9, 9, 'ывап', 'sas@dfsfsf.rr', '', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, '', '', '', '', '', '', '', '', '', NULL),
+(5, 5, 'Иванов Ваня Иванович', 'hello@dfsfsf.rr', '', '', 0, 0, 0, 0, 0, 0, 0, '', 0, 0, '', '', '', '', '', '', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
